@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+/*=============================================*
+ * Default Theme CSS
+ * Author: KL
+ * Creation: Nov. 15, 2018
+ *=============================================*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  -webkit-text-size-adjust: 100%;
+  background-color: #ffffff;
 }
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 1em;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Inter', 'Open Sans', 'Source Sans Pro', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  background-color: #ffffff;
+  color: #222222;
+}
+::selection {
+  background: #ed6a08;
+  color: #ffffff;
+}
+::-moz-selection {
+  background: #ed6a08;
+  color: #ffffff;
+}
+/*--- APP WRAPPER --*/
 
+/*--- HEADER ---*/
+.header {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #F55A5A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-wrap: nowrap
+}
+.header .logo {
+  display: inline-block;
+  font-size: 30px;
+  margin-right: 15px;
+}
+.header h1 {
+  font-size: 20px;
+  line-height: 22px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+/*--- LOCATIONS ---*/
+.locations {
+  display: block;
+  align-items: center;
+  width: 850px;
+  max-width: 100%;
+  margin: auto;
+  padding: 0 20px;
+}
+.locations .item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.locations .item .image {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 280px;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 46%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+.locations .item img {
+  display: none;
+}
+.item-content {
+  display: block;
+  padding: 0 0 0 20px;
+}
+.item-content .location {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.item-content .location i {
+  display: inline-block;
+  margin-right: 5px;
+  color: #F55A5A;
+}
+.item-content .location span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.item-content .location a {
+  display: inline-block;
+  margin-left: 20px;
+  color: #918E9B;
+}
+.item-content h2 {
+  display: block;
+  margin: 5px 0 30px 0;
+  padding: 0;
+  font-size: 35px;
+  line-height: 40px;
+}
+.item-content .dates {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
 }
