@@ -96,15 +96,19 @@ body {
   display: block;
   flex-grow: 0;
   flex-shrink: 0;
-  width: 280px;
-  height: 0;
+  width: 35%;
   margin: 0;
   padding: 0;
-  padding-bottom: 46%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 15px;
+}
+.locations .item .image:after {
+  content: "";
+  display: block;
+  height: 0;
+  padding-bottom: 125%;
 }
 .locations .item img {
   display: none;
@@ -147,4 +151,19 @@ body {
   font-size: 16px;
   line-height: 28px;
   font-weight: 700;
+}
+@media screen and (max-width: 550px) {
+  .locations .item {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .locations .item .image {
+    width: 275px;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .item-content {
+    padding: 0;
+  }
 }
